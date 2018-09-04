@@ -10,3 +10,9 @@ Topic.
 클래스를 통해 객체를 만드는 일반적인 방법은 public으로 선언된 생성자를 이용하는것.
 ##### 방법이 하나 더 있다!
 클래스에 public으로 선언된 정적 팩토리 메서드`(static factory method)` 를 추가하는것.
+
+Welcome to StackEdit!
+===================
+
+
+Hey! I'm your first Markdown document in **StackEdit**[^stackedit]. Don't delete me, I'm very helpful! I can be recovered anyway in the **Utils** tab of the <i class="icon-cog"></i> **Settings** dialog.
