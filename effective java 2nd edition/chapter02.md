@@ -7,18 +7,9 @@ Topic.
 4. 삭제 전에 반드시 이루어져야 하는 청소 작업들을 관리하는 방법
 
 ## 규칙 1 - 생성자 대신 정적 팩토리 메서드를 사용할 수 없는지 생각해 보라
-클래스를 통해 객체를 만드는 일반적인 방법은 public으로 선언된 생성자를 이용하는것.
-##### 방법이 하나 더 있다!
-클래스에 public으로 선언된 정적 팩토리 메서드`(static factory method)` 를 추가하는것.
+##### 객체를 만드는 방법
+1. 클래스에 public으로 선언된 `생성자`를 이용하는것.
+2. 클래스에 public으로 선언된 `정적 팩토리 메서드(static factory method)` 를 추가하는것.
 
-Welcome to StackEdit!
-===================
-
-
-Hey! I'm your first Markdown document in **StackEdit**[^stackedit]. Don't delete me, I'm very helpful! I can be recovered anyway in the **Utils** tab of the <i class="icon-cog"></i> **Settings** dialog.
-
-> **Note:**
-
-> - StackEdit is accessible offline after the application has been loaded for the first time.
-> - Your local documents are not shared between different browsers or computers.
-> - Clearing your browser's data may **delete all your local documents!** Make sure your documents are synchronized with **Google Drive** or **Dropbox** (check out the [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
+### 정적 팩토리 메서드의 장점
+#### 장점1. 생성자와는 달리 정적 팩토리 메서드에는 이름(name)이 있다.
