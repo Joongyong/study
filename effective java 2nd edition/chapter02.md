@@ -33,7 +33,8 @@ public Withdrawl(String send, String receive){
     ...
 }
 
-public Withdrawl(String receive, String send){ // 시그니처별로 하나의 생성자만 넣을수 있는 제약을 피하기 위해 인자의 순서를 변경
+// 시그니처별로 하나의 생성자만 넣을수 있는 제약을 피하기 위해 인자의 순서를 변경
+public Withdrawl(String receive, String send){ 
     ...
 }
 ```
@@ -69,5 +70,16 @@ public static Withdrawl withdrawlFromSender() {
 
 ### 장점 3. 형인자 자료형(parameterized type) 객체를 만드 때 편하다는 점이다.
 
-### 단점 1. public이나 protected로 선언도니 생성자가 없으므로 하위 클래스를 만들 수 없다는 것.
+### 단점 1. public이나 protected로 선언된 생성자가 없으므로 하위 클래스를 만들 수 없다는 것.
+논쟁의 소지가 있긴 하지만 그래서 더 좋다는 사람도 있는데, 계승(inheritance) 대신 구성(composition) 기법을 쓰도록 장려한다는 이유에서다.
+
 ### 단점 2. 정적 팩토리 메서드가 다른 정적 메서드와 확연히 구분되지 않는다는 것.
+API 문서를 보면 생성자는 다른 메서드와 뚜렷이 구별되지만, 정적 팩토리 메서드는 그렇지 않다.
+정적 팩토리 메서드를 통해 객체를 만들어야 하는 클래스는 사용법을 파악하기 쉽지 않다.
+
+
+## Summary
+- 정적 팩토리 메서드와 public 생성자는 용도가 서로 다르다.
+- 차이와 장단점을 이해하는 것이 중요하다.
+- 정적 팩토리 메서드가 효과적인 경우가 많으니 무조건 public 생성자를 만드는것보다 정적 팩토리 메서드를 고려해보자.
+
